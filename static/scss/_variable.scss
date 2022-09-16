@@ -1,0 +1,38 @@
+/*URL*/
+$url: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/allok/img";
+$font_url: "https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/common/font";
+// $font_url: "/font/";
+/*Hashing*/
+$version: "?v=3";
+
+// $max: 1080px;
+$pc: 1280px; 
+$tablet: 768px;
+$s_tablet: 708;
+$s_pc: 1280;
+$mobile: 320px;
+
+$header: 90px;
+$footer: 210px;
+
+/*Font 및 Color*/
+$family: "Pretendard", "pretendard", "프리텐다드", "Apple SD Gothic Neo", "Malgun Gothic",
+  "맑은 고딕", dotum, "돋음", "AppleGothic", "Arial", "Meiryo", "sans-serif";
+$font: 15;
+$pc_font: 16px;
+$bold: 500;
+
+$point:#2E79EB;
+$point1:#07D6E1;
+$dis: #969696;
+
+
+$white: #fff;
+$black: #262626;
+$gray: #696969;
+$red: #B00020;
+$border: #ddd;
+
+$s_white: "fff";
+$s_black: "000";
+$s_point: "2E79EB";

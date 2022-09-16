@@ -1,0 +1,21 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# environment
+.env
+.env.dev
+# pm2
+ecosystem.config.js
+
+logs/
+
+package-lock.json

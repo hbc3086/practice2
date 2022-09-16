@@ -1,0 +1,27 @@
+### 대출 신청 조회
+//POST https://all-ok.co.kr/api/availLender
+POST http://localhost:3001/api/availLender
+Content-Type: application/json
+
+{
+  "bizNo": "111-01-11111",
+  "compNm": "서버테스터회사",
+  "prstNm": "서버테스터킴",
+  "fndDt": "1990-12-12",
+  "tel": "010-1111-2222",
+  "cnsltEmail": "mc.kim@unicornranch.co.kr",
+  "cnsltTel": "111-1111-2222",
+  "patnYn": true,
+  "labYn": false,
+  "certYn": true,
+  "agrTm01": true,
+  "agrTm02": true
+}
+###
+
+###
+# @name = 상담신청
+//POST https://all-ok.co.kr/api/availLender/48b0086ba0f823908afec03b7dc973fb/consulting
+POST http://localhost:3001/api/availLender/434629cd1eedb598b5029566c4c31d25/consulting
+
+

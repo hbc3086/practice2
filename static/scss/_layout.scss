@@ -1,0 +1,429 @@
+.inner,.w_inner{
+  @include setCont(100%, null, block, relative);
+  margin: 0 auto;
+  @include tablet {
+    max-width: 980px;
+  }
+  @include pc {
+    max-width: $pc;
+  }
+}
+br{
+  &.mobile{
+    display: block;
+    @include tablet {
+      display: none;
+    }
+  }
+  &.tablet{
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+}
+footer{
+  background: #F5F5F5;
+  .inner{
+    padding: 20px calcPercent(15) 30px calcPercent(15);
+    @include tablet{
+      padding: 30px calcPercent(30, 768) 32px;
+    }
+    @include pc{
+      padding: 40px 57px 79px;
+    }
+  }
+  a{
+    font-size: calcRem(14);
+    line-height: calcRem(17);
+    &:hover{
+      text-decoration: underline;
+    }
+    @include tablet{
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+    }
+  }
+  // .f_menu{
+  //   display: none;
+  //   a{
+  //     font-weight: $bold;
+  //     &+a{
+  //       margin-left: calcPercent(15, 305);
+  //     }
+  //   }
+  //   @include tablet{
+  //     display: block;
+  //     font-size: calcRem(16);
+  //     line-height: calcRem(19);
+  //     margin-bottom: 20px;
+  //     a+a{
+  //       margin-left: calcPercent(19, $s_tablet);
+  //     }
+  //   }
+  // }
+  .link{
+    color: $gray;
+  }
+  h2{
+    color: #000;
+    font-size: calcRem(16);
+    line-height: 1;
+    @include tablet{
+      font-size: calcRem(18);
+      line-height: calcRem(21);
+    }
+  }
+  .bx_biz{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    @include pc{
+      margin-bottom: 0;
+    }
+  }
+  .bx_cs{
+    width: 100%;
+    br{
+      display: block;
+    }
+    @include tablet{
+      width: auto;
+      br{
+        display: none;
+      }
+    }
+  }
+  .bx_email{
+    margin-left: 0;
+  }
+  .coln{
+    @include tablet{
+      width: 105%;
+      margin-left: -2.25%;
+      margin-bottom: 0;
+      @include font(16, 19);
+      h3{
+        margin: 5px calcPercent(15, $s_tablet);
+      }
+    }
+    @include pc{
+      width: calc(100% + 30px);
+      margin-left: -15px;
+      h3{
+        margin: 5px 15px;
+      }
+    }
+  }
+  ul{
+    width: 100%;
+    @include tablet{
+      display: flex;
+      flex-wrap: wrap;
+      flex-grow: 1;
+      width: 105%;
+      margin-left: -2.25%;
+    }
+    @include pc{
+      width: calc(100% + 30px);
+      margin-left: -15px;
+    }
+  }
+  li{
+    width: 100%;
+    @include font(14, 17);
+    color: $gray;
+    letter-spacing: -0.25px;
+    span:first-child{
+      margin-right: calcPercent(2);
+    }
+    &+li{
+      margin-top: 5px;
+    }
+    @include tablet{
+      width: auto;
+      display: flex;
+      margin: 5px calcPercent(15, $s_tablet);
+      @include font(16, 19);
+      letter-spacing: 0;
+      flex-shrink: 0;
+      span,b{
+        display: inline-block;
+        flex-shrink: 0;
+      }
+      span:first-child{
+        margin-right: 9px;
+      }
+    }
+    @include pc{
+      margin: 5px 15px;
+      flex-shrink: 0;
+      &.grow{
+        width: 600px;
+      }
+    }
+  }
+  h3{
+    color: #000;
+    @include font(14, 17);
+    margin-bottom: 7px;
+    @include tablet{
+      @include font(16, 19);
+      margin-bottom: 0;
+    }
+  }
+  .copy{
+    margin-top: 20px;
+    color: #969696;
+    @include font(12);
+    @include tablet{
+      margin-top: 35px;
+      @include font(16, 19);
+    }
+    @include pc{
+      margin-top: 36px;
+    }
+  }
+}
+.quick_menu{
+  width: auto !important;
+  position: fixed !important;
+  right: 15px;
+  bottom: 75px;
+  z-index: 11;
+  opacity: 0.8;
+  transition: all 400ms ease;
+  @include pc{
+    top: 66px;
+    right: 47px;
+    opacity: 1;
+    bottom: unset;
+  }
+  .unit{
+    @include setCont(60px, 205px, block, relative, #FFD943);
+    border-radius: 100px;
+    .tel2 {
+      display: none;
+    }
+    a{
+      position: relative;
+      &+a{
+        &:before{
+          @include setCont(50px, 1px, block, absolute,#E0B300);
+          top: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+    @include pc{
+      @include setCont(95px, 299px);
+      a+a{
+        &:before{
+          width: 70px;
+        }
+      }
+    }
+  }
+  button, a{
+    @include setCont(100%, 67px, flex, relative);
+    @include font(10, 10);
+    border-radius: 100px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: flex-start;
+    transition: all 300ms ease;
+    &:hover{
+      opacity: 0.7;
+    }
+    @include pc{
+      @include font(14);
+      &:hover {
+        .tel1 {
+          display: none;
+        }
+        .tel2 {
+          display: flex;
+          text-align: center;
+          &:before {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+    b{
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+      color: #000;
+      transition: all 300ms ease;
+      &:before{
+        @include setCont(100%, 25px, block, relative);
+        margin-bottom: 5px;
+      }
+    }
+    @include pc{
+      height: 100px;
+      @include font(14, 16);
+      b{
+        &:before{
+          @include setCont(100%, 35px, block, relative);
+          margin-bottom: 7px;
+        }
+      }
+    }
+    &:hover{
+      text-decoration: none;
+    }
+  }
+  .btn_cs{
+    b{
+      margin-top: 15px;
+      &:before{
+        @include bgSvg(icoCs($s_black), no-repeat, 50% 0, 27px auto);
+      }
+    }
+    @include pc{
+      height: 100px;
+      b{
+        margin-top: 25px;
+        &:before{
+          background-size: 30px auto !important;
+        }
+      }
+    }
+  }
+  .btn_qna{
+    height: 65px;
+    b{
+      margin-top: 10px;
+      &:before{
+        @include bgSvg(icoQna($s_black), no-repeat, 50% 0, 19px auto);
+      }
+    }
+    @include pc{
+      height: 87px;
+      b{
+        margin-top: 15px;
+        &:before{
+          background-size: 23px auto !important;
+        }
+      }
+    }
+  }
+  .btn_case{
+    height: 73px;
+    b{
+      margin-top: 10px;
+      &:before{
+        @include bgSvg(icoCase($s_black), no-repeat, 50% 0, 21px auto);
+      }
+    }
+    @include pc{
+      height: 112px;
+      b{
+        margin-top: 15px;
+        &:before{
+          background-size: 29px auto !important;
+        }
+      }
+    }
+  }
+  .btn_top{
+    @include setCont(50px, 50px, block, relative, #262626);
+    margin-top: 10px;
+    overflow: visible;
+    b{
+      color: $white;
+      &:before{
+        @include setCont(100%, 10px);
+        @include bgSvg(icoTop($s_white), no-repeat, 50% 0, 7px auto);
+        margin: 0 auto 3px;
+      }
+    }
+    &:hover{
+      background: #696969;
+    }
+    &.animate__fadeOut{
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      margin-top: 10px;
+    }
+    @include pc{
+      @include setCont(60px, 60px);
+      margin-top: 31px;
+      b{
+        &:before{
+          height: 17px;
+          background-size: 12px auto !important;
+        }
+      }
+    }
+  }
+}
+
+#chanelTalkBtn{
+  @include setCont(50px, 50px, block, fixed);
+  @include bg("/common/chaneltalk.svg", no-repeat, 50% 50%, 69px auto);
+  @include blind;
+  bottom: 15px;
+  right: 20px;
+  @include pc{
+    @include setCont(60px, 60px, block, fixed);
+    background-size: 79px !important;
+    bottom: 30px;
+    right: 63px;
+  }
+}
+
+
+.container {
+  width: 100%;
+  min-width: 1080px;
+  height: 100%;
+  padding: 15px 25px 25px;
+  transition: all 400ms ease;
+  .location{
+    display: flex;
+    align-items: center;
+    padding: 0 20px 15px;
+    a{
+      display: block;
+      flex-shrink: 0;
+      color: #666;
+      &+a{
+        display: flex;
+        align-items: center;
+        &:before{
+          @include setCont(10px, 5px, block);
+          @include bgSvg(arrDown("777"), no-repeat, 50% 50%, 8px 5px);
+          transform: rotate(-90deg);
+          margin: 0 7px;
+          // transform: translateY(-50%) rotateX(180deg);
+        }
+      }
+      &.on{
+        color: $black;
+        font-weight: $bold;
+      }
+    }
+  }
+  .inner{
+    @include setCont(100%, auto, block, relative);
+    min-height: calc(100% - 31px);
+    background: #fff;
+    padding: 20px;
+    .top{
+      padding-bottom: 20px;
+    }
+    &.no_padding{
+      padding: 0;
+      .top{
+        padding: 20px;
+      }
+    }
+  }
+}
+//https://s3.ap-northeast-2.amazonaws.com/static.unicornranch.co.kr/allok/img/common/chaneltalk.svg

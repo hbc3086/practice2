@@ -1,0 +1,461 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Montserrat:wght@100&family=Nanum+Gothic:wght@400;700;800&family=Nanum+Myeongjo:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/*!Pretendard
+ * 10Bagger Community Page v1.0.0 (https://www.unicornranch.co.kr/)
+ * Copyright 2021 Unicorn Ranch, Inc.
+ * Author      : Gibberishor
+ * Create Date : 2021.10.01
+ */
+
+
+/* 공통 기본
+ ******* START *******/
+
+@font-face {
+  font-family: 'Pretendard-Thin';
+  src: url('../font/Pretendard/Pretendard-Thin.woff') format('woff');
+  font-weight: 100;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-ExtraLight';
+  src: url('../font/Pretendard/Pretendard-ExtraLight.woff') format('woff');
+  font-weight: 200;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-Light';
+  src: url('../font/Pretendard/Pretendard-Light.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard';
+  src: url('../font/Pretendard/Pretendard-Regular.woff') format('woff');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-Medium';
+  src: url('../font/Pretendard/Pretendard-Medium.woff') format('woff');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-SemiBold';
+  src: url('../font/Pretendard/Pretendard-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-Bold';
+  src: url('../font/Pretendard/Pretendard-Bold.woff') format('woff');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-ExtraBold';
+  src: url('../font/Pretendard/Pretendard-ExtraBold.woff') format('woff');
+  font-weight: 800;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Pretendard-Black';
+  src: url('../font/Pretendard/Pretendard-Black.woff') format('woff');
+  font-weight: 900;
+  font-display: swap;
+}
+
+html, body {
+  margin: 0px;
+  border: none;
+  font-family: 'Pretendard', 'Noto Sans KR', 'Montserrat', 'Nanum Gothic', sans-serif;
+  font-size: 1em;
+  white-space: nowrap;
+  -ms-overflow-style: none;
+  color: #393A3D;
+  background-color: #ffffff;
+
+  /* ORIGINAL SETTING */
+  /* color: #191919; */
+  /* background-color: #eeeeee; */
+}
+
+::-webkit-scrollbar { display: none; }
+
+.xl-pointer {
+  cursor: pointer;
+}
+
+.xl-flex-col {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  flex-direction: column;
+}
+
+.xl-flex-row {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+
+  flex-direction: row;
+}
+
+.xl-top, .xl-left {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.xl-bottom, .xl-right {
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.xl-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadein { /* Firefox */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadein { /* Safari and Chrome */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadein { /* Opera */
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.xl-wol00 {
+  overflow: hidden;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+
+  font-family: 'Pretendard', 'Noto Sans KR', 'Montserrat', 'Nanum Gothic', sans-serif;
+}
+
+.xl-body {
+  width: 100%;
+  overflow: auto;
+}
+
+.xl-contents {
+  background-color: #ECEEF1;
+}
+
+.xl-overlay-02 {
+  display: none;
+  position: absolute;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 93;
+}
+
+.xl-popup-p {
+  display: flex;
+  position: absolute;
+  overflow: hidden;
+
+  width: 50vw;
+  height: 50vh;
+
+  top: -100vh;
+  left: 0vw;
+
+  background-color: #ffffff;
+  border-radius: 6px;
+  /* border: #cccccc solid 1px; */
+
+  transition-property: all;
+  transition-duration: 0.7s;
+  transition-timing-function: ease-in-out;
+
+  z-index: 94;
+}
+
+.xl-p-p-s01 {
+  width: 100%;
+  height: 40px;
+  background-color: #ffffff;
+}
+
+.xl-p-p-s01-1 {
+  width: calc( 100% - 80px );
+  height: 100%;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.xl-p-p-s01-2 {
+  width: 40px;
+  height: 100%;
+  cursor: pointer;
+}
+
+.xl-p-p-s01-3 {
+  width: 40px;
+  height: 100%;
+}
+
+.xl-p-p-s01-2:hover {
+  fill: #ff2800;
+}
+
+.xl-p-p-s05 {
+  width: calc( 100% - 80px );
+  height: 40px;
+
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.xl-cancel-btn {
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #393A3D;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.xl-cancel-btn:hover {
+  background-color: #8D9096;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease-in-out;
+}
+
+/* 공통 기본
+ ******* END *******/
+
+/* 메인페이지
+ ******* START *******/
+
+.xl-lookup-result-button {
+  font-size: 14px;
+  font-weight: 400;
+  color: #45DDFF;
+  fill: #45DDFF;
+  border: #45DDFF solid 2px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.xl-lookup-result-button:hover {
+  color: #262626;
+  fill: #262626;
+  background-color: #45DDFF;
+}
+
+@keyframes slidedown-text {
+  from {
+    top:-50px;
+    opacity: 0;
+  }
+
+  to {
+    top:0px;
+    opacity: 1;
+  }
+}
+
+.xl-lookup-button {
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #2E79EB;
+  border-radius: 35px;
+  cursor: pointer;
+}
+
+.xl-lookup-button:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #45DDFF;
+}
+
+@keyframes slideleft-svg {
+  from {
+    margin-right:0px;
+    opacity: 0;
+  }
+
+  to {
+    margin-right:40px;
+    opacity: 1;
+  }
+}
+
+@keyframes slideleft-svg2 {
+  from {
+    margin-left:100px;
+    opacity: 0;
+  }
+
+  to {
+    margin-left:0px;
+    opacity: 1;
+  }
+}
+
+/* 메인페이지
+ ******* END *******/
+
+
+/* 조회페이지
+ ******* START *******/
+
+.xl-basic-input {
+  width: calc( 100% - 34px );
+  height: calc( 100% - 4px );
+  border: none;
+  background: none;
+  padding-left: 30px;
+}
+
+.xl-mobile-input {
+  width: calc( 100% - 14px );
+  height: calc( 100% - 4px );
+  border: none;
+  background: none;
+  padding-left: 10px;
+}
+
+.xl-mobile-input::placeholder {
+  font-size: 13px;
+  font-weight: 400;
+  color: #969696;
+  fill: #969696;
+}
+
+.xl-mobile-input:focus {
+  outline: none;
+  border:#2E79EB solid 0px;
+}
+
+input:focus {
+  outline: none;
+  border:#2E79EB solid 1px;
+}
+
+input::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #969696;
+  fill: #969696;
+}
+
+.xl-inquiry-button {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  fill: #ffffff;
+  background-color: #2E79EB;
+  border:#2E79EB solid 1px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.xl-inquiry-button:hover {
+  color: #ffffff;
+  fill: #ffffff;
+  border:#45DDFF solid 1px;
+  background-color: #45DDFF;
+}
+
+.checks {position: relative;}
+.checks input[type="radio"] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip:rect(0,0,0,0);
+  border: 0;
+}
+.checks input[type="radio"] + label {
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.checks input[type="radio"] + label:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  background: #fafafa;
+  border: 1px solid #cacece;
+  border-radius: 100%;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+}
+.checks input[type="radio"] + label:active:before,
+.checks input[type="radio"]:checked + label:active:before  {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checks input[type="radio"]:checked + label:before {
+  background: #E9ECEE;
+  border-color: #adb8c0;
+}
+.checks input[type="radio"]:checked + label:after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background: #005AAB;
+  border-radius: 100%;
+}
+
+/* 조회페이지
+ ******* END *******/
+

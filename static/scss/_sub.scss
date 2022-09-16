@@ -1,0 +1,3108 @@
+.sub {
+  @include tablet {
+    .wrap {
+      background: #f7faff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+  }
+  .w_inner {
+    position: relative;
+    padding: 30px calcPercent(15) 30px;
+    min-height: 100vh;
+    @include tablet {
+      max-height: 800px;
+      padding: 60px 60px 50px;
+      width: 620px;
+      max-width: 620px;
+      height: 90vh;
+      min-height: 0px;
+      overflow-y: auto;
+      background: $white;
+      box-shadow: 0px 20px 20px #0000003b;
+      border-radius: 10px;
+      &::-webkit-scrollbar {
+        width: 5px;
+        height: 5px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #ccdae8;
+      }
+    }
+    &.type2{
+      padding: 0;
+      justify-content: center;
+      overflow: hidden;
+      .container{
+        padding: 30px calcPercent(15) 30px;
+        width: 100%;
+        height: 100%;
+        // min-height: 660px;
+        // max-height: 750px;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        margin: 0 auto;
+        @include tablet {
+          padding: 60px 60px 50px;
+          // min-height: 1px;
+          // max-height: 1px;
+        }
+        @include pc {
+          // min-height: 1px;
+          // max-height: 1px;
+        }
+        .content {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .align {
+    width: 100%;
+  }
+  .top {
+    width: 100%;
+    .txt_point3 {
+      color: $point !important;
+      background: linear-gradient(to top, #fff577 50%, transparent 50%);
+      border-radius: 10px;
+    }
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(27, 36);
+      }
+    }
+    .desc {
+      margin-top: 4px;
+      color: #969696;
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+    }
+  }
+  .btn {
+    width: 100%;
+    border-radius: 5px;
+    @include tablet {
+      padding: 13px calcPercent(20);
+    }
+    @include pc {
+      padding: 16px 20px 15px;
+    }
+  }
+  .btn2 {
+    margin-top: 10px;
+    width: 80px;
+    height: 25px;
+    border-radius: 5px;
+    @include tablet {
+    }
+    @include pc {
+    }
+  }
+  .area_bnr {
+    @include setCont(100%, calcVw(70), flex, relative);
+    max-height: 100px;
+    align-items: center;
+    margin: 30px 0 18px;
+    padding: 17px calcPercent(20, 290) 15px;
+    background: #1f284a;
+    border-radius: 5px;
+    @include tablet {
+      height: calcVw(70, 7.68);
+      max-height: 90px;
+      margin: 50px 0 10px;
+      padding: 26px calcPercent(30, $s_tablet);
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+      br {
+        display: none;
+      }
+    }
+    @include pc {
+      height: 90px;
+      margin: 40px 0 20px;
+    }
+    &:before {
+      @include setCont(null, null, block, absolute);
+      top: 50%;
+      left: calcVw(15);
+      transform: translateY(-50%);
+      content: "NOTICE";
+      color: #201f45;
+      @include fontfamily(500, "mont");
+      font-size: calcRem(45);
+      line-height: calcRem(64);
+      z-index: 1;
+      @include tablet {
+        left: calcVw(30, 7.68);
+        font-size: calcRem(50);
+      }
+    }
+    &:after {
+      @include setCont(calcVw(102), calcVw(70), block, absolute);
+      @include bgSvg(imgResult1(), no-repeat, 50% 50%, 100% auto);
+      max-width: 131px;
+      max-height: 100px;
+      top: -10px;
+      right: calcVw(5);
+      animation: aniSub1 1s infinite ease;
+      z-index: 2;
+      @include tablet {
+        @include setCont(calcVw(102, 7.68), calcVw(70, 7.68));
+        right: calcVw(40, 7.68);
+      }
+      @include pc {
+        @include setCont(127px, 88px);
+        top: -15px;
+        right: 42px;
+      }
+      @keyframes aniSub1 {
+        0% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(10%);
+        }
+        100% {
+          transform: translateY(0);
+        }
+        // 0% {
+        //   top: -10px;
+        // }
+        // 50% {
+        //   top: -5px;
+        // }
+        // 100% {
+        //   top: -10px;
+        // }
+      }
+    }
+    p {
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+      color: $white;
+    }
+    .bx {
+      position: relative;
+      z-index: 3;
+    }
+  }
+  .content {
+    width: 100%;
+    margin-bottom: 40px;
+    @include tablet {
+      margin-bottom: 50px;
+    }
+  }
+  .list {
+    width: 100%;
+    li {
+      @include setCont(100%, null, block, relative);
+      padding: 15px calcPercent(15);
+      border-bottom: 1px solid $border;
+      @include tablet {
+        padding: 20px 20px 17.5px;
+        h3 {
+          font-size: calcRem(18);
+          line-height: calcRem(21);
+        }
+      }
+      &:before {
+        @include setCont(10px, 10px, block, absolute, #ccdae8);
+        top: 18px;
+        left: 0;
+        border-radius: 10px;
+        @include tablet {
+          top: 26px;
+        }
+      }
+      .cont {
+        width: 100%;
+        margin-top: 7.5px;
+        &.bx_block {
+          width: 100%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  .appli {
+    .content {
+      padding-bottom: 0;
+      .btn {
+        margin-top: 15px;
+      }
+      @include tablet {
+        margin-bottom: 0;
+        .btn {
+          margin-top: 40px;
+          & + .list {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .list {
+      margin-top: 8px;
+      @include tablet {
+        display: block;
+        margin-top: 40px;
+      }
+      li {
+        border: none;
+        @include tablet {
+          padding: 0 calcPercent(20, $s_tablet);
+          // padding: 0 calcPercent(20, $s_tablet);
+          font-size: calcRem(16);
+          line-height: calcRem(19);
+          &:before {
+            top: 6px;
+          }
+          br {
+            display: none;
+          }
+        }
+        .img_appli1 {
+          @include setCont(210px, 238px, block);
+          @include bg("/sub/img_appli1_1.svg", no-repeat, 50% 50%, 100% 100%);
+          @include blind;
+          margin-top: 10px;
+          @include tablet {
+            margin-top: 30px;
+            padding-top: calcPercent(153, 656);
+            @include setCont(100%, 0, block);
+            @include bg("/sub/img_appli1.svg", no-repeat, 50% 50%, 100% 100%);
+          }
+        }
+      }
+    }
+    .bx.col2 {
+      @include setCont(100%, null, null, relative, #f7f7f7);
+      border: 1px solid #ddd;
+      margin-top: 15px;
+      padding: 20px calcPercent(5, 290);
+      @include tablet {
+        margin-top: 20px;
+        padding: 40px calcPercent(5, $s_tablet) 20px;
+      }
+      .col {
+        width: 50%;
+        text-align: center;
+        & + .col {
+          border-left: 1px solid $border;
+        }
+        img {
+          width: calcPercent(95, 145);
+          max-width: 150px;
+          @include tablet {
+            width: calcPercent(125, 354);
+            max-width: 100%;
+          }
+        }
+        span {
+          display: block;
+          margin-top: 10px;
+          color: #4a4a4a;
+          font-size: calcRem(12);
+          line-height: calcRem(15);
+          @include tablet {
+            margin-top: 0;
+            font-size: calcRem(14);
+          }
+        }
+      }
+    }
+  }
+  .bx_step {
+    padding: 15px calcPercent(15) 0;
+    display: flex;
+    margin-bottom: 17px;
+    @include tablet {
+      margin-bottom: 10px;
+      justify-content: flex-end;
+      padding: 30px 50px 0;
+    }
+    .item {
+      @include setCont(18px, 18px, block, relative);
+      text-align: center;
+      font-weight: $bold;
+      @include font(11, 18);
+      color: $white;
+      em {
+        @include setCont(100%, 100%, block, relative, #ccdae8);
+        border-radius: 11px;
+        z-index: 2;
+      }
+      & + .item {
+        margin-left: 12px;
+        &:before {
+          @include setCont(15px, 3px, block, absolute, #ccdae8);
+          top: 50%;
+          left: -13px;
+          transform: translateY(-50%);
+        }
+      }
+      &.on {
+        em {
+          background-color: #005aab;
+        }
+        &:before {
+          background-color: #969696;
+        }
+      }
+      &.done {
+        em {
+          background-color: #969696;
+        }
+        &:before {
+          background-color: #969696;
+        }
+      }
+    }
+  }
+  .complete {
+    .content {
+      margin-bottom: 0;
+      .btn {
+        margin-top: 15px;
+      }
+      @include tablet {
+        margin-bottom: 0;
+        .btn {
+          margin-top: 40px;
+          & + .list {
+            margin-top: 30px;
+          }
+        }
+      }
+    }
+    .list {
+      margin-top: 8px;
+      @include tablet {
+        display: block;
+        margin-top: 40px;
+      }
+      li {
+        border: none;
+        @include tablet {
+          padding: 0 calcPercent(20, $s_tablet);
+          font-size: calcRem(16);
+          line-height: calcRem(19);
+          &:before {
+            top: 6px;
+          }
+          br {
+            display: none;
+          }
+        }
+        .img_appli1 {
+          @include setCont(230px, 265px, block);
+          @include bg("/sub/img_procedure.svg", no-repeat, 50% 50%, 100% 100%);
+          @include blind;
+          margin-top: 10px;
+          @include tablet {
+            margin-top: 30px;
+            padding-top: calcPercent(153, 656);
+            @include setCont(100%, 0, block);
+            @include bg("/sub/img_appli1.svg", no-repeat, 50% 50%, 100% 100%);
+          }
+        }
+      }
+    }
+    .bx.col2 {
+      @include setCont(100%, null, null, relative, #f7f7f7);
+      border: 1px solid #ddd;
+      margin-top: 15px;
+      padding: 20px calcPercent(5, 290);
+      @include tablet {
+        margin-top: 20px;
+        padding: 40px calcPercent(5, $s_tablet) 20px;
+      }
+      .col {
+        width: 50%;
+        text-align: center;
+        & + .col {
+          border-left: 1px solid $border;
+        }
+        span{
+          br{
+            @include tablet {
+              display: none;
+            }
+          }
+        }
+        img {
+          width: calcPercent(95, 145);
+          max-width: 150px;
+          margin-bottom: 5px;
+          @include tablet {
+            width: calcPercent(125, 354);
+            max-width: 100%;
+          }
+        }
+        span {
+          display: block;
+          margin-top: 10px;
+          color: #4a4a4a;
+          font-size: calcRem(12);
+          line-height: calcRem(15);
+          @include tablet {
+            margin-top: 0;
+            font-size: calcRem(14);
+          }
+        }
+      }
+    }
+  }
+  .confirm4 {
+    padding-bottom: 130px;
+    @include tablet {
+      padding-bottom: 0;
+    }
+    .bx_step{
+      padding: 0;
+    }
+    .w_inner {
+      @include tablet {
+        max-height: 100%;
+        padding-top: 40px;
+        overflow: hidden;
+        padding: 40px 33px 40px 45px;
+      }
+      @include pc {
+        padding: 30px 33px 50px 45px;
+      }
+    }
+    .bx_label {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      margin: -2px 0 4px -2px;
+      @include tablet {
+        margin-bottom: 7px;
+      }
+    }
+    .list_finance {
+      &::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      &::-webkit-scrollbar-track {
+        width: 1px;
+        height: 1px;
+        background: #ccdae8;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: #969696;
+      }
+      &::-webkit-scrollbar-thumb:hover,
+      &::-webkit-scrollbar-thumb:active {
+        background: #868686;
+      }
+      @include tablet {
+        padding: 0 23px 200px 0;
+        // padding-bottom: 200px;
+        height: calc(100% - 71px);
+        overflow-y: auto;
+      }
+      @include pc {
+        @include font(30, 36);
+      }
+    }
+  }
+  .area_bottom {
+    @include setCont(100%, auto, block, fixed, rgba(255, 255, 255, 0.9));
+    padding: 0 calcPercent(15);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    z-index: 10;
+    @include tablet{
+      padding: 0 50px;
+    }
+    .inner{
+      padding: 27px 0 30px;
+      border-top: 1px solid #dbdbdb;
+    }
+    h3 {
+      @include font(15, 18);
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+    p {
+      @include font(14, 17);
+      color: #969696;
+      text-align: center;
+    }
+    p+.btn {
+      margin-top: 20px;
+    }
+    @include tablet {
+      position: absolute;
+      h3 {
+        @include font(18, 21);
+      }
+      p {
+        @include font(18, 21);
+      }
+      p+.btn {
+        margin-top: 23px;
+      }
+    }
+  }
+}
+.create {
+  .list_finance {
+    &::-webkit-scrollbar {
+      width: 3px;
+      height: 3px;
+    }
+    &::-webkit-scrollbar-track {
+      width: 1px;
+      height: 1px;
+      background: #ccdae8;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: #969696;
+    }
+    &::-webkit-scrollbar-thumb:hover,
+    &::-webkit-scrollbar-thumb:active {
+      background: #868686;
+    }
+    @include tablet {
+      padding: 0 23px 30px 0;
+      height: calc(100% - 248px);
+      overflow-y: auto;
+    }
+    @include pc {
+      @include font(30, 36);
+      height: calc(100% - 242px);
+    }
+  }
+  width: 100%;
+  .txt_alert {
+    margin-top: 5px;
+    & + .f_item {
+      margin-top: 15px;
+    }
+  }
+  .f_item {
+    transition: all 400ms ease;
+    @include setCont(100%, 45px, flex, relative, #f7f7f7);
+    border: 1px solid $border;
+    align-items: center;
+    @include pc {
+      height: 50px;
+    }
+    & + .f_item {
+      margin-top: 5px;
+      @include pc {
+        margin-top: 10px;
+      }
+    }
+    &.colb {
+      flex-wrap: nowrap;
+      .tit {
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+      .ipt {
+        width: 68.09%;
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+    }
+    &.row2 {
+      height: 90px;
+      .right {
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+        &:before {
+          @include setCont(
+            (100% - calcPercent(20, 213)),
+            1px,
+            block,
+            absolute,
+            $border
+          );
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          @include tablet {
+            width: 100% - calcPercent(40, 520);
+          }
+          @include pc {
+            width: calc(100% - 43px);
+          }
+          // border-top: 1px solid $border;
+        }
+      }
+      .ipt {
+        width: 100%;
+        height: 45px;
+        // padding: 0;
+        padding: 0 calcPercent(10, 213) 0 calcPercent(10, 213);
+        @include tablet {
+          padding: 0 23px 0 calcPercent(20, 576);
+        }
+        @include pc {
+          padding: 0 23px 0 20px;
+        }
+      }
+    }
+    &.item_radio {
+      width: 100%;
+      min-height: 45px;
+      flex-wrap: wrap;
+      height: auto;
+      background: none;
+      border: none;
+      padding: 7.5px 0 11.5px;
+      border-bottom: 1px solid $border;
+      @include pc {
+        padding: 16px 0 15px;
+      }
+      .tit {
+        position: relative;
+        &.full {
+          width: 100%;
+          max-width: 100%;
+          &:before {
+            display: none;
+          }
+          & + .col {
+            width: 100%;
+            margin-top: 13px;
+            max-width: 100%;
+            .bx_radio {
+              padding-left: calcPercent(10, 290);
+              width: calcPercent(104, 290);
+            }
+          }
+        }
+      }
+      .col {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 400px;
+        flex-grow: 1;
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+      .bx_radio {
+        width: calcPercent(104, 208);
+        max-width: 50%;
+        padding-left: calcPercent(23, 215);
+        @include tablet {
+          width: calcPercent(136, 420);
+          padding: 0 0 0 calcPercent(30, 420);
+        }
+        @include pc {
+          width: 136px;
+          padding: 0 0 0 31px;
+        }
+      }
+    }
+    .tit {
+      @include setCont(calcPercent(75, 290), 100%, flex, relative);
+      max-width: 140px;
+      flex-shrink: 0;
+      padding: 0 10px 0 calcPercent(10, 290);
+      align-items: center;
+      color: $gray;
+      font-size: calcRem(12);
+      line-height: calcRem(15);
+      span {
+        flex-shrink: 0;
+      }
+      @include tablet {
+        width: calcPercent(130, $s_tablet);
+        padding: 0 10px 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+        line-height: calcRem(17);
+      }
+      &:before {
+        @include setCont(1px, 14px, block, absolute, $border);
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      &.dot {
+        span {
+          display: block;
+          position: relative;
+          &:before {
+            @include setCont(5px, 5px, block, absolute, $point1);
+            top: -2px;
+            right: -7px;
+            border-radius: 5px;
+            @include tablet {
+              top: 3px;
+              right: -10px;
+            }
+          }
+        }
+      }
+    }
+    .ipt {
+      @include setCont(100%, 100%);
+      flex-grow: 1;
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      text-fill-color: none;
+      &:focus,
+      &:hover,
+      &:active {
+        border: none;
+        background: none;
+        outline: none;
+        // transition: background-color 5000s ease-in-out 0s;
+        box-shadow: none;
+        text-fill-color: none;
+        // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        // -webkit-text-fill-color: #fff !important;
+      }
+    }
+    .btn {
+      @include setCont(calcPercent(55, 290), calc(100% + 2px), flex, relative);
+      justify-content: center;
+      align-items: center;
+      max-width: 110px;
+      padding: 0;
+      background: $point;
+      border-radius: 0;
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      flex-shrink: 0;
+      &:hover {
+        background: $point1;
+      }
+      @include pc {
+        max-width: 104px;
+      }
+    }
+  }
+  .toggle_item {
+    width: 100%;
+    padding: 15px 0 0;
+    transition: all 300ms ease-in;
+    color: #696969;
+    font-size: calcRem(13);
+    border-top: 1px solid $border;
+    @include tablet {
+      padding: 15px calcPercent(20, $s_tablet) 0;
+    }
+    @include pc {
+      padding: 17px 20px 0;
+    }
+    .btn_link {
+      font-size: calcRem(14);
+      line-height: calcRem(18);
+      color: #969696;
+      text-decoration: underline;
+      flex-shrink: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .c_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      .txt_blue {
+        color: #63bdc3;
+        margin-left: 5px;
+      }
+      @include pc {
+        padding-bottom: 15px;
+      }
+    }
+    .c_cont {
+      @include setCont(100%, 0, block, relative, $white);
+      overflow: hidden;
+      border: 0 solid transparent;
+      word-break: keep-all;
+      transition: all 300ms ease;
+      padding: 0 calcPercent(10) 0 calcPercent(8);
+      font-size: calcRem(13);
+      line-height: calcRem(17);
+      opacity: 0;
+      @include tablet {
+        padding: 0 calcPercent(28, $s_tablet) 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+      }
+      .bx {
+        @include setCont(100%, 100%);
+        padding-right: calcPercent(5, 370);
+        overflow-y: auto;
+        @include tablet {
+          font-size: calcRem(14);
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        width: 1px;
+        height: 1px;
+        background: #ccdae8;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #969696;
+      }
+      ::-webkit-scrollbar-thumb:hover,
+      ::-webkit-scrollbar-thumb:active {
+        background: #868686;
+      }
+      .inner {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .list_priv {
+        ul {
+          padding-left: 10px;
+        }
+      }
+      h4 {
+        font-size: calcRem(13);
+        font-weight: 400;
+      }
+      h4,
+      p,
+      .list_priv {
+        & + h4,
+        & + p,
+        & + .list_priv {
+          margin-top: 15px;
+        }
+      }
+    }
+    &.on {
+      padding-bottom: 15px;
+      .c_cont {
+        height: 136px;
+        padding: 10px calcPercent(10, 290) 10px calcPercent(8, 290);
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        background-color: #f7f7f7;
+        opacity: 1;
+        transition: all 300ms ease;
+        @include tablet {
+          padding: 19px calcPercent(28, $s_tablet) 15px
+            calcPercent(20, $s_tablet);
+        }
+      }
+    }
+  }
+  .area1 {
+    margin: 40px 0 10px;
+    transition: all 400ms ease;
+    @include pc {
+      margin: 60px 0 6px;
+    }
+  }
+  .area2 {
+    margin-bottom: 40px;
+    .f_item {
+      margin-top: 0;
+      .tit {
+        @include tablet {
+          width: calcPercent(287, $s_tablet);
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .area3 {
+    margin-bottom: 40px;
+    h3 {
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+      margin-bottom: 10px;
+      color: $gray;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include pc {
+      margin-bottom: 60px;
+    }
+  }
+}
+.result {
+  .w_inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    .align {
+      width: 100%;
+    }
+  }
+}
+.failure {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .wrap_scroll {
+    @include tablet {
+      padding: 0 0 30px 0;
+      .container{
+        min-height: 560px;
+      }
+    }
+    @include pc {
+      @include font(30, 36);
+    }
+  }
+  .w_inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    
+  }
+  .align {
+    width: 100%;
+  }
+  .btns {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    @include pc {
+      .btn {
+        width: 50%;
+        border-radius: 5px;
+        margin-left: 5px;
+        @include tablet {
+          padding: 13px calcPercent(20);
+        }
+        @include pc {
+          padding: 16px 20px 15px;
+        }
+      }
+    }
+    .btn {
+      width: 50%;
+      border-radius: 5px;
+      margin-left: 3.5px;
+      @include tablet {
+        padding: 13px calcPercent(20);
+      }
+      @include pc {
+        padding: 16px 20px 15px;
+      }
+    }
+    .btn_gray {
+      width: 50%;
+      border-radius: 5px;
+      line-height: 1;
+      color: #262626;
+      font-weight: $bold;
+      padding: 13px calcPercent(20) 12px;
+      text-align: center;
+      background: #efefef;
+      flex-shrink: 0;
+      &:hover {
+        background: $point1;
+      }
+      @include tablet {
+        padding: 13px calcPercent(20, $s_tablet) 15px;
+        @include font(16, 19);
+      }
+      @include pc {
+        padding: 16px 20px 15px;
+      }
+    }
+  }
+  .top {
+    .ico_fail {
+      @include setCont(43px, 43px, block);
+      @include bg("/sub/img_failure1.svg", no-repeat, 50% 50%, 100% 100%);
+      margin: auto;
+      margin-bottom: 20px;
+      @include pc {
+        margin: auto;
+        margin-bottom: 20px;
+      }
+    }
+    width: 100%;
+    text-align: center;
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(25, 30);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      @include tablet {
+        margin-top: 40px;
+      }
+      @include pc {
+        margin-top: 33px;
+        font-size: calcRem(20);
+        line-height: calcRem(24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+      &:before {
+        @include setCont(20px, 20px, inline-block);
+        @include bgSvg(
+          icoList($s_point, "CCDAE8"),
+          no-repeat,
+          50% 50%,
+          100% 100%
+        );
+        margin-right: 4px;
+        vertical-align: middle;
+        margin-top: -2px;
+        @include tablet {
+          @include setCont(25px, 25px);
+          background-size: 25px 25px !important;
+        }
+        @include pc {
+          margin-right: 6px;
+          @include setCont(30px, 30px);
+        }
+      }
+    }
+    .desc {
+      margin-top: 4px;
+      color: #969696;
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+      @include pc {
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    @include tablet {
+      // margin-bottom: 0;
+    }
+    .img_fail {
+      @include setCont(134.24px, 178.5px, block);
+      @include bg("/sub/img_failure2.svg", no-repeat, 50% 50%, 100% 100%);
+      margin: 50px auto 40px;
+    }
+    .cont {
+      width: 100%;
+      text-align: center;
+      @include font(16, 19);
+      @include pc {
+        @include font(18, 21);
+      }
+    }
+    .tip {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-top: 22px;
+      color: #fd8800;
+      @include font(12, 14);
+      width: 95%;
+      .ico_tip {
+        @include setCont(36.19px, 17px, block);
+        @include bgSvg(icoTip(), no-repeat, 50% 50%, 100% 100%);
+        margin-left: 9px;
+        margin-right: 3.81px;
+        margin-top: -2px;
+      }
+      @include pc {
+        margin-top: 23px;
+        display: flex;
+        justify-content: center;
+        @include font(14, 16);
+        .ico_tip {
+          @include setCont(40px, 21px, block);
+          @include bgSvg(icoTip(), no-repeat, 50% 50%, 100% 100%);
+          margin-left: 9px;
+          margin-right: 3.81px;
+          margin-top: -4px;
+        }
+      }
+    }
+  }
+}
+
+.intro {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .w_inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .container {
+    min-height: 650px;
+  }
+  .top {
+    width: 100%;
+    .txt_point3 {
+      color: $point !important;
+      background: linear-gradient(to top, #fff577 50%, transparent 50%);
+      border-radius: 10px;
+    }
+    p {
+      margin-top: 7px;
+      color: #969696;
+      @include tablet {
+        br{
+          display: none;
+        }
+      }
+    }
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(27, 36);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      // line-height: calcRem(21);
+      @include tablet {
+        margin-top: 33px;
+        @include font(20,24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+      &:before {
+        @include setCont(20px, 20px, inline-block);
+        @include bgSvg(
+          icoList($s_point, "CCDAE8"),
+          no-repeat,
+          50% 50%,
+          100% 100%
+        );
+        margin-right: 4px;
+        vertical-align: middle;
+        margin-top: -2px;
+        @include tablet {
+          @include setCont(25px, 25px);
+          background-size: 25px 25px !important;
+        }
+        @include pc {
+          margin-right: 6px;
+          @include setCont(30px, 30px);
+        }
+      }
+    }
+    .desc {
+      margin-top: 4px;
+      color: #969696;
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    text-align: center;
+    margin: 25px auto 0;      
+    @include tablet {
+      margin: 50px auto 0;      
+    }
+    p{
+      margin-top: 35px;
+      @include font(16, 19);
+      color: $gray;
+      font-weight: $bold;
+      b {
+        color: #2e79eb;
+      }
+      @include tablet {
+        margin-top: 40px;
+        @include font(20, 24);
+      }
+    }
+    .img_intro {
+      @include setCont(139.36px, 150px, block);
+      @include bg("/sub/img_intro.svg", no-repeat, 50% 50%, 100% 100%);
+      margin: 0 auto;
+      @include tablet {
+        @include setCont(157.94px, 170px, block);
+        @include bg("/sub/img_intro_pc.svg", no-repeat, 50% 50%, 100% 100%);
+      }
+    }
+    .img_intro2 {
+      @include setCont(290px, 140px, block);
+      @include bg("/sub/img_intro2.svg", no-repeat, 50% 50%, 100% 100%);
+      margin: auto;
+      margin-top: 11px;
+      margin: 10px auto 0;
+      @include tablet {
+        @include setCont(500px, 130px, block);
+        @include bg("/sub/img_intro2_pc.svg", no-repeat, 100% 100%, 100% 100%);
+        margin: 20px auto 0;
+      }
+      &+p {
+        margin-top: 11px;
+        @include tablet {
+          margin-top: 20px;
+          br{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+.confirm {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .wrap_scroll {
+    padding: 0 calcPercent(15) 95px;
+    @include tablet {
+      padding: 0 50px 30px 50px;
+      overflow-y: auto;
+    }
+    @include pc {
+      @include font(30, 36);
+      padding: 0 50px 30px 50px;
+    }
+  }
+  .w_inner {
+    padding: 15px 4.6875% 30px;
+    @include tablet {
+      padding: 40px 50px;
+    }
+    @include pc {
+      padding: 25px 50px 50px 50px;
+    }
+  }
+  .top {
+    width: 100%;
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(30, 36);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      // line-height: calcRem(21);
+      @include tablet {
+        margin-top: 40px;
+      }
+      @include pc {
+        margin-top: 33px;
+        font-size: calcRem(20);
+        line-height: calcRem(24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .desc {
+      margin-top: 4px;
+      color: #969696;
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+      @include pc {
+      }
+    }
+    .txt_point3 {
+      color: $point !important;
+      background: linear-gradient(to top, #fff577 50%, transparent 50%);
+      border-radius: 10px;
+    }
+  }
+  .txt_alert {
+    margin-top: 5px;
+    & + .f_item {
+      margin-top: 15px;
+    }
+  }
+  .f_item {
+    transition: all 400ms ease;
+    @include setCont(100%, 45px, flex, relative, #f7f7f7);
+    border: 1px solid $border;
+    align-items: center;
+    @include pc {
+      height: 50px;
+    }
+    & + .f_item {
+      margin-top: 5px;
+      @include pc {
+        margin-top: 10px;
+      }
+    }
+    &.colb {
+      flex-wrap: nowrap;
+      .tit {
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+      .ipt {
+        width: 68.09%;
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+    }
+    &.row2 {
+      height: 90px;
+      .right {
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+        &:before {
+          @include setCont(
+            (100% - calcPercent(20, 213)),
+            1px,
+            block,
+            absolute,
+            $border
+          );
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          @include tablet {
+            width: 100% - calcPercent(40, 520);
+          }
+          @include pc {
+            width: calc(100% - 43px);
+          }
+          // border-top: 1px solid $border;
+        }
+      }
+      .ipt {
+        width: 100%;
+        height: 45px;
+        // padding: 0;
+        padding: 0 calcPercent(10, 213) 0 calcPercent(10, 213);
+        @include tablet {
+          padding: 0 23px 0 calcPercent(20, 576);
+        }
+        @include pc {
+          padding: 0 23px 0 20px;
+        }
+      }
+    }
+    &.item_radio {
+      width: 100%;
+      min-height: 45px;
+      flex-wrap: wrap;
+      height: auto;
+      background: none;
+      border: none;
+      padding: 7.5px 0 11.5px;
+      border-bottom: 1px solid $border;
+      @include pc {
+        padding: 16px 0 15px;
+      }
+      .tit {
+        &.full {
+          width: 100%;
+          max-width: 100%;
+          &:before {
+            display: none;
+          }
+          & + .col {
+            width: 100%;
+            margin-top: 13px;
+            max-width: 100%;
+            .bx_radio {
+              padding-left: calcPercent(10, 290);
+              width: calcPercent(104, 290);
+            }
+          }
+        }
+      }
+      .col {
+        max-width: 400px;
+        flex-grow: 1;
+        display: flex;
+        flex-wrap: wrap;
+        @include tablet {
+          max-width: 100%;
+        }
+        @include pc {
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+      .bx_radio {
+        min-width: 33%;
+        max-width: 75%;
+        padding-top: 15px;
+        padding-left: 13px;
+        @include tablet {
+          // width: calcPercent(136, 420);
+          width: auto;
+          min-width: 0;
+          max-width: 1000%;
+          padding: 0 0 16px calcPercent(30, 420);
+        }
+        @include pc {
+          padding: 0 0 16px calcPercent(30, 420);
+        }
+      }
+    }
+    .tit {
+      @include setCont(auto, 100%, flex, relative);
+      @include font(12,15);
+      max-width: 140px;
+      flex-shrink: 0;
+      padding: 0 10px 0 calcPercent(10, 290);
+      align-items: center;
+      color: $gray;
+      @include tablet {
+        padding: 0 10px 0 20px;
+        @include font(14,17);
+      }
+      @include pc {
+        &:before {
+          @include setCont(1px, 14px, block, absolute, $border);
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+      }
+      &.dot {
+        span {
+          display: block;
+          position: relative;
+          &:before {
+            @include setCont(5px, 5px, block, absolute, $point1);
+            top: -2px;
+            right: -7px;
+            border-radius: 5px;
+            @include tablet {
+              top: 3px;
+              right: -10px;
+            }
+          }
+        }
+      }
+    }
+    .ipt {
+      @include setCont(100%, 100%);
+      flex-grow: 1;
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      text-fill-color: none;
+      &:focus,
+      &:hover,
+      &:active {
+        border: none;
+        background: none;
+        outline: none;
+        // transition: background-color 5000s ease-in-out 0s;
+        box-shadow: none;
+        text-fill-color: none;
+        // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        // -webkit-text-fill-color: #fff !important;
+      }
+    }
+    .btn {
+      @include setCont(calcPercent(55, 290), calc(100% + 2px), flex, relative);
+      justify-content: center;
+      align-items: center;
+      max-width: 110px;
+      padding: 0;
+      background: $point;
+      border-radius: 0;
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      flex-shrink: 0;
+      &:hover {
+        background: $point1;
+      }
+      @include pc {
+        max-width: 104px;
+      }
+    }
+  }
+  .toggle_item {
+    width: 100%;
+    padding: 15px 0 0;
+    transition: all 300ms ease-in;
+    color: #696969;
+    font-size: calcRem(13);
+    border-top: 1px solid $border;
+    @include tablet {
+      padding: 15px calcPercent(20, $s_tablet) 0;
+    }
+    @include pc {
+      padding: 17px 20px 0;
+    }
+    .btn_link {
+      font-size: calcRem(14);
+      line-height: calcRem(18);
+      color: #969696;
+      text-decoration: underline;
+      flex-shrink: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .c_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      .txt_blue {
+        color: #63bdc3;
+        margin-left: 5px;
+      }
+      @include pc {
+        padding-bottom: 15px;
+      }
+    }
+    .c_cont {
+      @include setCont(100%, 0, block, relative, $white);
+      overflow: hidden;
+      border: 0 solid transparent;
+      word-break: keep-all;
+      transition: all 300ms ease;
+      padding: 0 calcPercent(10) 0 calcPercent(8);
+      font-size: calcRem(13);
+      line-height: calcRem(17);
+      opacity: 0;
+      @include tablet {
+        padding: 0 calcPercent(28, $s_tablet) 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+      }
+      .bx {
+        @include setCont(100%, 100%);
+        padding-right: calcPercent(5, 370);
+        overflow-y: auto;
+        @include tablet {
+          font-size: calcRem(14);
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        width: 1px;
+        height: 1px;
+        background: #ccdae8;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #969696;
+      }
+      ::-webkit-scrollbar-thumb:hover,
+      ::-webkit-scrollbar-thumb:active {
+        background: #868686;
+      }
+      .inner {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .list_priv {
+        ul {
+          padding-left: 10px;
+        }
+      }
+      h4 {
+        font-size: calcRem(13);
+        font-weight: 400;
+      }
+      h4,
+      p,
+      .list_priv {
+        & + h4,
+        & + p,
+        & + .list_priv {
+          margin-top: 15px;
+        }
+      }
+    }
+    &.on {
+      padding-bottom: 15px;
+      .c_cont {
+        height: 136px;
+        padding: 10px calcPercent(10, 290) 10px calcPercent(8, 290);
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        background-color: #f7f7f7;
+        opacity: 1;
+        transition: all 300ms ease;
+        @include tablet {
+          padding: 19px calcPercent(28, $s_tablet) 15px
+            calcPercent(20, $s_tablet);
+        }
+      }
+    }
+  }
+  .area1 {
+    margin: 21px 0 10px;
+    transition: all 400ms ease;
+    .coln{
+      justify-content: flex-end;
+    }
+    .desc {
+      text-align: left;
+      margin-top: 4px;
+      margin-bottom: 6px;
+      color: #969696;
+      @include font(11, 13);
+      @include tablet {
+        @include font(12, 19);
+        margin-top: 10px;
+      }
+      @include pc {
+      }
+    }
+    .col2 {
+      margin-top: 5px;
+      display: flex;
+      justify-content: space-between;
+      .col {
+        width: 49.5%;
+      }
+    }
+    @include tablet {
+      .col2 {
+        .col {
+          width: 100%;
+        }
+      }
+    }
+    .f_item {
+      margin-bottom: 5px;
+      transition: all 400ms ease;
+      @include setCont(100%, 45px, flex, relative, #f7f7f7);
+      border: 1px solid $border;
+      align-items: center;
+      @include pc {
+        height: 50px;
+      }
+      & + .f_item {
+        margin-top: 0px;
+        @include pc {
+        }
+      }
+      &.colb {
+        flex-wrap: nowrap;
+        .tit {
+          padding: 0 10px 0 calcPercent(10, 290);
+        }
+        .ipt {
+          width: 68.09%;
+          padding: 0 10px 0 calcPercent(10, 290);
+        }
+      }
+      &.row2 {
+        height: 90px;
+        .right {
+          width: 100%;
+          flex-grow: 1;
+          position: relative;
+          &:before {
+            @include setCont(
+              (100% - calcPercent(20, 213)),
+              1px,
+              block,
+              absolute,
+              $border
+            );
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            @include tablet {
+              width: 100% - calcPercent(40, 520);
+            }
+            @include pc {
+              width: calc(100% - 43px);
+            }
+            // border-top: 1px solid $border;
+          }
+        }
+        .ipt {
+          width: 100%;
+          height: 45px;
+          // padding: 0;
+          padding: 0 calcPercent(10, 213) 0 calcPercent(10, 213);
+          @include tablet {
+            padding: 0 23px 0 calcPercent(20, 576);
+          }
+          @include pc {
+            padding: 0 23px 0 20px;
+          }
+        }
+      }
+      &.item_radio {
+        width: 100%;
+        min-height: 45px;
+        flex-wrap: wrap;
+        height: auto;
+        background: none;
+        border: none;
+        padding: 13px 0;
+        border-bottom: 1px solid $border;
+        @include pc {
+          padding: 16px 0 15px;
+        }
+        .tit {
+          &.full {
+            width: 100%;
+            max-width: 100%;
+            &:before {
+              display: none;
+            }
+            & + .col {
+              width: 100%;
+              margin-top: 13px;
+              max-width: 100%;
+              .bx_radio {
+                padding-left: calcPercent(10, 290);
+                width: calcPercent(104, 290);
+              }
+            }
+          }
+        }
+        .col {
+          max-width: 400px;
+          flex-grow: 1;
+          @include tablet {
+            max-width: 100%;
+          }
+        }
+        .bx_radio {
+          width: calcPercent(104, 208);
+          max-width: 50%;
+          padding-left: calcPercent(23, 215);
+          @include tablet {
+            width: calcPercent(136, 420);
+            padding: 0 0 16px calcPercent(30, 420);
+          }
+          @include pc {
+            width: calcPercent(136, 420);
+            padding: 0 0 16px calcPercent(30, 420);
+          }
+        }
+      }
+      .tit {
+        @include setCont(62px, 100%, flex, relative);
+        max-width: 140px;
+        flex-shrink: 0;
+        padding: 0 5px 0 10px;
+        align-items: center;
+        color: $gray;
+        font-size: calcRem(12);
+        line-height: calcRem(15);
+        @include tablet {
+          width: calcPercent(190, $s_tablet);
+          padding: 0 10px 0 calcPercent(20, $s_tablet);
+          font-size: calcRem(14);
+          line-height: calcRem(17);
+        }
+        &:before {
+          @include setCont(1px, 14px, block, absolute, $border);
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+        }
+
+        &.dot {
+          span {
+            display: block;
+            position: relative;
+            &:before {
+              @include setCont(5px, 5px, block, absolute, $point1);
+              top: -2px;
+              right: -7px;
+              border-radius: 5px;
+              @include tablet {
+                top: 3px;
+                right: -10px;
+              }
+            }
+          }
+        }
+      }
+      .ipt {
+        @include setCont(100%, 100%);
+        flex-grow: 1;
+        border: none;
+        background: none;
+        outline: none;
+        box-shadow: none;
+        text-fill-color: none;
+        &:focus,
+        &:hover,
+        &:active {
+          border: none;
+          background: none;
+          outline: none;
+          // transition: background-color 5000s ease-in-out 0s;
+          box-shadow: none;
+          text-fill-color: none;
+          // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+          // -webkit-text-fill-color: #fff !important;
+        }
+      }
+      .btn {
+        @include setCont(
+          calcPercent(55, 290),
+          calc(100% + 2px),
+          flex,
+          relative
+        );
+        justify-content: center;
+        align-items: center;
+        max-width: 110px;
+        padding: 0;
+        background: $point;
+        border-radius: 0;
+        color: $white;
+        font-weight: 400;
+        text-align: center;
+        flex-shrink: 0;
+        &:hover {
+          background: $point1;
+        }
+        @include pc {
+          max-width: 104px;
+        }
+      }
+    }
+  }
+  .area2 {
+    padding: 0 0 20px;
+    @include tablet {
+      padding: 10px 0 55px;
+    }
+    .f_item {
+      padding: 10px 0 15px;
+      align-items: flex-start;
+      &:first-child{
+        padding-top: 0;
+        @include tablet{
+          padding-bottom: 0;
+        }
+      }
+      .tit {
+        width: 100%;
+        max-width: 100%;
+        @include font(12, 14);
+        @include tablet {
+          width: 130px;
+        }
+        @include pc {
+          @include font(14, 16);
+        }
+      }
+      .cont {
+        margin-left: 12px;
+        margin-top: 12.5px;
+        span {
+          @include font(12, 14);
+          color: #969696;
+          b {
+            @include font(16, 19);
+            color: #f24e4d;
+            margin-left: 15px;
+          }
+          .num {
+            margin-right: 45px;
+            color: #fd8800;
+          }
+        }
+        @include pc {
+          flex-direction: column;
+          margin-left: 40px;
+          span {
+            @include font(14, 16);
+            margin-bottom: 16px;
+            b {
+              @include font(18, 21);
+            }
+          }
+        }
+      }
+      .coln{
+        margin-top: 8px;
+        margin-left: calcPercent(10, 290);
+        @include tablet {
+          width: calc(100% - 130px);
+          margin: -6px 0 0 0;
+          padding-left: calcPercent(22, 420);
+        }
+        span{
+          margin: 4px 0;
+          min-width: 50%;
+          display: flex;
+          align-items: center;
+          @include tablet {
+            min-width: 100%;
+          }
+          em{
+            @include tablet {
+              width: 120px;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  .area3 {
+    margin-bottom: 40px;
+    h3 {
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+      margin-bottom: 10px;
+      color: $gray;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include pc {
+      margin-bottom: 60px;
+    }
+  }
+}
+.confirm3 {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .wrap_scroll {
+    padding: 0 calcPercent(15) 205px;
+    @include tablet {
+      padding: 0 50px 30px 50px;
+    }
+    @include pc {
+      padding: 0 50px 30px 50px;
+    }
+  }
+  .w_inner {
+    padding: 15px calcPercent(15) 30px;
+    @include tablet {
+      padding: 40px 50px;
+    }
+    @include pc {
+      padding: 30px 50px 50px 50px;
+    }
+  }
+  .txt_alert {
+    margin-top: 5px;
+    & + .f_item {
+      margin-top: 15px;
+    }
+  }
+  .f_item {
+    transition: all 400ms ease;
+    @include setCont(100%, 45px, flex, relative, #f7f7f7);
+    border: 1px solid $border;
+    align-items: center;
+    @include pc {
+      height: 50px;
+    }
+    & + .f_item {
+      margin-top: 5px;
+      @include pc {
+        margin-top: 10px;
+      }
+    }
+    &.colb {
+      flex-wrap: nowrap;
+      .tit {
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+      .ipt {
+        width: 68.09%;
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+    }
+    &.row2 {
+      height: 90px;
+      .right {
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+        &:before {
+          @include setCont(
+            (100% - calcPercent(20, 213)),
+            1px,
+            block,
+            absolute,
+            $border
+          );
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          @include tablet {
+            width: 100% - calcPercent(40, 520);
+          }
+          @include pc {
+            width: calc(100% - 43px);
+          }
+          // border-top: 1px solid $border;
+        }
+      }
+      .ipt {
+        width: 100%;
+        height: 45px;
+        // padding: 0;
+        padding: 0 calcPercent(10, 213) 0 calcPercent(10, 213);
+        @include tablet {
+          padding: 0 23px 0 calcPercent(20, 576);
+        }
+        @include pc {
+          padding: 0 23px 0 20px;
+        }
+      }
+    }
+    &.item_radio {
+      width: 100%;
+      min-height: 45px;
+      flex-wrap: wrap;
+      height: auto;
+      background: none;
+      border: none;
+      padding: 13px 0;
+      border-bottom: 1px solid $border;
+      @include pc {
+        padding: 16px 0 15px;
+      }
+      .tit {
+        &.full {
+          width: 100%;
+          max-width: 100%;
+          &:before {
+            display: none;
+          }
+          & + .col {
+            width: 100%;
+            margin-top: 13px;
+            max-width: 100%;
+            .bx_radio {
+              padding-left: calcPercent(10, 290);
+              width: calcPercent(104, 290);
+            }
+          }
+        }
+      }
+      .col {
+        max-width: 400px;
+        flex-grow: 1;
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+      .bx_radio {
+        width: calcPercent(104, 208);
+        max-width: 50%;
+        padding-left: calcPercent(23, 215);
+        @include tablet {
+          width: calcPercent(136, 420);
+          padding: 0 0 0 calcPercent(30, 420);
+        }
+        @include pc {
+          width: 136px;
+          padding: 0 0 0 31px;
+        }
+      }
+    }
+    .tit {
+      @include setCont(calcPercent(75, 290), 100%, flex, relative);
+      max-width: 140px;
+      flex-shrink: 0;
+      padding: 0 10px 0 calcPercent(10, 290);
+      align-items: center;
+      color: $gray;
+      font-size: calcRem(12);
+      line-height: calcRem(15);
+      @include tablet {
+        width: calcPercent(130, $s_tablet);
+        padding: 0 10px 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+        line-height: calcRem(17);
+      }
+      &:before {
+        @include setCont(1px, 14px, block, absolute, $border);
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      &.dot {
+        span {
+          display: block;
+          position: relative;
+          &:before {
+            @include setCont(5px, 5px, block, absolute, $point1);
+            top: -2px;
+            right: -7px;
+            border-radius: 5px;
+            @include tablet {
+              top: 3px;
+              right: -10px;
+            }
+          }
+        }
+      }
+    }
+    .ipt {
+      @include setCont(100%, 100%);
+      flex-grow: 1;
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      text-fill-color: none;
+      &:focus,
+      &:hover,
+      &:active {
+        border: none;
+        background: none;
+        outline: none;
+        // transition: background-color 5000s ease-in-out 0s;
+        box-shadow: none;
+        text-fill-color: none;
+        // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        // -webkit-text-fill-color: #fff !important;
+      }
+    }
+    .btn {
+      @include setCont(calcPercent(55, 290), calc(100% + 2px), flex, relative);
+      justify-content: center;
+      align-items: center;
+      max-width: 110px;
+      padding: 0;
+      background: $point;
+      border-radius: 0;
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      flex-shrink: 0;
+      &:hover {
+        background: $point1;
+      }
+      @include pc {
+        max-width: 104px;
+      }
+    }
+  }
+  .toggle_item {
+    width: 100%;
+    padding: 15px 0 0;
+    transition: all 300ms ease-in;
+    color: #696969;
+    font-size: calcRem(13);
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+    @include tablet {
+      padding: 15px calcPercent(20, $s_tablet) 0;
+    }
+    @include pc {
+      padding: 17px 20px 0;
+    }
+    .btn_link {
+      font-size: calcRem(14);
+      line-height: calcRem(18);
+      color: #969696;
+      text-decoration: underline;
+      flex-shrink: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .c_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      .txt_blue {
+        color: #63bdc3;
+        margin-left: 5px;
+      }
+      @include pc {
+        padding-bottom: 15px;
+      }
+    }
+    .c_cont {
+      @include setCont(100%, 0, block, relative, $white);
+      overflow: hidden;
+      border: 0 solid transparent;
+      word-break: keep-all;
+      transition: all 300ms ease;
+      padding: 0 calcPercent(10) 0 calcPercent(8);
+      font-size: calcRem(13);
+      line-height: calcRem(17);
+      opacity: 0;
+      @include tablet {
+        padding: 0 calcPercent(28, $s_tablet) 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+      }
+      .bx {
+        @include setCont(100%, 100%);
+        padding-right: calcPercent(5, 370);
+        overflow-y: auto;
+        @include tablet {
+          font-size: calcRem(14);
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        width: 1px;
+        height: 1px;
+        background: #ccdae8;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #969696;
+      }
+      ::-webkit-scrollbar-thumb:hover,
+      ::-webkit-scrollbar-thumb:active {
+        background: #868686;
+      }
+      .inner {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .list_priv {
+        ul {
+          padding-left: 10px;
+        }
+      }
+      h4 {
+        font-size: calcRem(13);
+        font-weight: 400;
+      }
+      h4,
+      p,
+      .list_priv {
+        & + h4,
+        & + p,
+        & + .list_priv {
+          margin-top: 15px;
+        }
+      }
+    }
+    &.on {
+      padding-bottom: 15px;
+      .c_cont {
+        height: 136px;
+        padding: 10px calcPercent(10, 290) 10px calcPercent(8, 290);
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        background-color: #f7f7f7;
+        opacity: 1;
+        transition: all 300ms ease;
+        @include tablet {
+          padding: 19px calcPercent(28, $s_tablet) 15px
+            calcPercent(20, $s_tablet);
+        }
+      }
+    }
+  }
+  .toggle_item2 {
+    width: 100%;
+    padding: 15px 0 0;
+    transition: all 300ms ease-in;
+    color: #696969;
+    font-size: calcRem(13);
+    border-bottom: 1px solid $border;
+    @include tablet {
+      padding: 15px calcPercent(20, $s_tablet) 0;
+    }
+    @include pc {
+      padding: 17px 20px 0;
+    }
+    .btn_link {
+      font-size: calcRem(14);
+      line-height: calcRem(18);
+      color: #969696;
+      text-decoration: underline;
+      flex-shrink: 0;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+    .c_top {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 14px;
+      .txt_blue {
+        color: #63bdc3;
+        margin-left: 5px;
+      }
+      @include pc {
+        padding-bottom: 15px;
+      }
+    }
+    .c_cont {
+      @include setCont(100%, 0, block, relative, $white);
+      overflow: hidden;
+      border: 0 solid transparent;
+      word-break: keep-all;
+      transition: all 300ms ease;
+      padding: 0 calcPercent(10) 0 calcPercent(8);
+      font-size: calcRem(13);
+      line-height: calcRem(17);
+      opacity: 0;
+      @include tablet {
+        padding: 0 calcPercent(28, $s_tablet) 0 calcPercent(20, $s_tablet);
+        font-size: calcRem(14);
+      }
+      .bx {
+        @include setCont(100%, 100%);
+        padding-right: calcPercent(5, 370);
+        overflow-y: auto;
+        @include tablet {
+          font-size: calcRem(14);
+        }
+      }
+      ::-webkit-scrollbar {
+        width: 3px;
+        height: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        width: 1px;
+        height: 1px;
+        background: #ccdae8;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #969696;
+      }
+      ::-webkit-scrollbar-thumb:hover,
+      ::-webkit-scrollbar-thumb:active {
+        background: #868686;
+      }
+      .inner {
+        height: 100%;
+        overflow-y: auto;
+      }
+      .list_priv {
+        ul {
+          padding-left: 10px;
+        }
+      }
+      h4 {
+        font-size: calcRem(13);
+        font-weight: 400;
+      }
+      h4,
+      p,
+      .list_priv {
+        & + h4,
+        & + p,
+        & + .list_priv {
+          margin-top: 15px;
+        }
+      }
+    }
+    &.on {
+      padding-bottom: 15px;
+      .c_cont {
+        height: 136px;
+        padding: 10px calcPercent(10, 290) 10px calcPercent(8, 290);
+        overflow: hidden;
+        border: 1px solid #dddddd;
+        background-color: #f7f7f7;
+        opacity: 1;
+        transition: all 300ms ease;
+        @include tablet {
+          padding: 19px calcPercent(28, $s_tablet) 15px
+            calcPercent(20, $s_tablet);
+        }
+      }
+    }
+  }
+  .area1 {
+    margin: 30px 0 0;
+    transition: all 400ms ease;
+    @include pc {
+      margin: 40px 0 6px;
+    }
+  }
+  .area2 {
+    margin-bottom: 40px;
+    .f_item {
+      margin-top: 0;
+      .tit {
+        @include tablet {
+          width: calcPercent(287, $s_tablet);
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .area3 {
+    margin-bottom: 19px;
+    h3 {
+      font-size: calcRem(16);
+      line-height: calcRem(19);
+      margin-bottom: 10px;
+      color: $gray;
+    }
+    @include tablet {
+      margin-bottom: 50px;
+    }
+    @include pc {
+      margin-bottom: 60px;
+    }
+  }
+  .title {
+    margin-top: 40px;
+    font-size: 16px;
+  }
+  .top {
+    width: 100%;
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(27, 36);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      // line-height: calcRem(21);
+      @include tablet {
+        margin-top: 40px;
+      }
+      @include pc {
+        margin-top: 33px;
+        font-size: calcRem(20);
+        line-height: calcRem(24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .desc {
+      width: 75%;
+      margin-top: 7px;
+      color: #969696;
+      @include font(15, 18);
+      @include tablet {
+        @include font(18, 19);
+        margin-top: 11px;
+      }
+      @include pc {
+        margin-top: 11px;
+        width: 100%;
+        @include font(18, 21);
+      }
+    }
+  }
+}
+
+.confirm2 {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .wrap_scroll {
+    padding: 0 calcPercent(15) 40px;
+    @include tablet {
+      padding: 0 50px 180px 50px;
+      overflow-y: auto;
+      padding-bottom: 180px !important;
+    }
+  }
+  .w_inner {
+    padding: 15px 4.6875% 30px;
+    @include tablet {
+      padding: 40px 50px;
+    }
+    @include pc {
+      padding: 30px 50px 50px 50px;
+    }
+  }
+  .top {
+    width: 100%;
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(30, 36);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      // line-height: calcRem(21);
+      @include tablet {
+        margin-top: 40px;
+      }
+      @include pc {
+        margin-top: 33px;
+        font-size: calcRem(20);
+        line-height: calcRem(24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .desc {
+      width: 100%;
+      margin-top: 7px;
+      color: #969696;
+      text-align: left;
+      margin-bottom: 15px;
+      @include font(15, 18);
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+      @include pc {
+        @include font(20, 24);
+      }
+    }
+  }
+  .txt_alert {
+    margin-top: 5px;
+    & + .f_item {
+      margin-top: 15px;
+    }
+  }
+  .tit{
+    position: relative;
+    @include font(15,18);
+    @include tablet {
+      @include font(18,21);
+    }
+    .tooltip{
+      margin-top: -3px;
+      display: inline-block;
+      vertical-align: middle;
+      @include tablet {
+        display: none;
+      }
+    }
+    .another {
+      .desc{
+        top: 44px;
+      }
+    }
+  }
+  .list{
+    &> li{
+      padding-bottom: 0;
+    }
+    li{
+      &:nth-child(2){
+        @include tablet{
+          .col{
+            justify-content: space-between;
+          }
+          .bx_radio{
+            width: auto;
+          }
+
+        }
+      }
+    }
+  }
+  .f_item {
+    transition: all 400ms ease;
+    @include setCont(100%, 45px, flex, relative, #f7f7f7);
+    border: 1px solid $border;
+    align-items: center;
+    @include pc {
+      height: 50px;
+    }
+    & + .f_item {
+      margin-top: 5px;
+      @include pc {
+        margin-top: 10px;
+      }
+    }
+    &.colb {
+      flex-wrap: nowrap;
+      .ipt {
+        width: 68.09%;
+        padding: 0 10px 0 calcPercent(10, 290);
+      }
+    }
+    &.row2 {
+      height: 90px;
+      .right {
+        width: 100%;
+        flex-grow: 1;
+        position: relative;
+        &:before {
+          @include setCont(
+            (100% - calcPercent(20, 213)),
+            1px,
+            block,
+            absolute,
+            $border
+          );
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%);
+          @include tablet {
+            width: 100% - calcPercent(40, 520);
+          }
+          @include pc {
+            width: calc(100% - 43px);
+          }
+          // border-top: 1px solid $border;
+        }
+      }
+      .ipt {
+        width: 100%;
+        height: 45px;
+        // padding: 0;
+        padding: 0 calcPercent(10, 213) 0 calcPercent(10, 213);
+        @include tablet {
+          padding: 0 23px 0 calcPercent(20, 576);
+        }
+        @include pc {
+          padding: 0 23px 0 20px;
+        }
+      }
+    }
+    &.item_radio {
+      width: 100%;
+      min-height: 45px;
+      flex-wrap: wrap;
+      height: auto;
+      background: none;
+      border: none;
+      padding: 7.5px 0 15px;
+      @include pc {
+        // padding: 16px 0 15px;
+      }
+      .col {
+        max-width: 400px;
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        @include tablet {
+          max-width: 100%;
+        }
+      }
+      .bx_radio {
+        width: calcPercent(104, 208);
+        max-width: 50%;
+        padding-left: calcPercent(0, 215);
+        margin: 2.5px 0;
+        @include tablet {
+          // width: calcPercent(136, 420);
+          width: 50%;
+          padding: 0 0 0 calcPercent(0, 420);
+        }
+        @include pc {
+          width: 250px;
+          padding: 0 0 0 0;
+        }
+      }
+    }
+    .ipt {
+      @include setCont(100%, 100%);
+      flex-grow: 1;
+      border: none;
+      background: none;
+      outline: none;
+      box-shadow: none;
+      text-fill-color: none;
+      &:focus,
+      &:hover,
+      &:active {
+        border: none;
+        background: none;
+        outline: none;
+        // transition: background-color 5000s ease-in-out 0s;
+        box-shadow: none;
+        text-fill-color: none;
+        // -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        // -webkit-text-fill-color: #fff !important;
+      }
+    }
+    .btn {
+      @include setCont(calcPercent(55, 290), calc(100% + 2px), flex, relative);
+      justify-content: center;
+      align-items: center;
+      max-width: 110px;
+      padding: 0;
+      background: $point;
+      border-radius: 0;
+      color: $white;
+      font-weight: 400;
+      text-align: center;
+      flex-shrink: 0;
+      &:hover {
+        background: $point1;
+      }
+      @include pc {
+        max-width: 104px;
+      }
+    }
+  }
+  .tooltip{
+    display: none;
+  }
+  .txt_mint{
+    color: #63BDC3;
+    @include font(12,16);
+    display: block;
+    font-weight: 400;
+    margin-top: 2px;
+    @include tablet{
+      display: inline-block;
+      @include font(14,17);
+    }
+  }
+  .tip {
+    display: none;
+    width: 100%;
+    color: #fd8800;
+    @include font(13, 16);
+    font-weight: 400;
+    align-content: center;
+    margin-top: 5px;
+    align-items: center;
+    @include tablet{
+      display: flex;
+    }
+    .ico_tip {
+      @include setCont(40px, 21px, block);
+      @include bgSvg(icoTip(), no-repeat, 50% 50%, 100% auto);
+      margin-right: 4px;
+    }
+  }
+}
+
+.complete {
+  .area_bottom .inner {
+    border: 0;
+  }
+  .wrap_scroll {
+    margin-top: 0;
+    padding: 30px calcPercent(15) 120px;
+    padding-bottom: 120px !important;
+    @include tablet {
+      padding: 30px 50px 30px 50px;
+      overflow-y: auto;
+    }
+    @include pc {
+      padding: 30px 50px 30px 50px;
+      @include font(30, 36);
+    }
+  }
+  .w_inner {
+    padding: 30px 4.6875% 19px;
+    @include tablet {
+      padding: 61px 50px 51px;
+    }
+    @include pc {
+      padding: 51px 50px 112px 50px;
+    }
+  }
+
+  .top {
+    width: 100%;
+    margin-bottom: 15px;
+    @include pc {
+      margin-bottom: 31px;
+    }
+    h1 {
+      @include font(20, 24);
+      position: relative;
+      display: inline-block;
+      b {
+        position: relative;
+        z-index: 2;
+        color: #2e79eb;
+      }
+      @include tablet {
+        @include font(25, 30);
+      }
+      @include pc {
+        @include font(27, 31);
+      }
+    }
+    h2 {
+      position: relative;
+      margin-top: 23px;
+      font-size: calcRem(18);
+      // line-height: calcRem(21);
+      @include tablet {
+        margin-top: 40px;
+      }
+      @include pc {
+        margin-top: 33px;
+        font-size: calcRem(20);
+        line-height: calcRem(24);
+      }
+      .txt_point {
+        position: relative;
+        em {
+          position: relative;
+          z-index: 2;
+        }
+        &:before {
+          @include setCont(91%, 5px, inline-block, absolute, $point1);
+          right: 0;
+          bottom: 0;
+          opacity: 0.5;
+          z-index: 1;
+          @include tablet {
+            width: 100%;
+          }
+        }
+      }
+      &:before {
+        @include setCont(20px, 20px, inline-block);
+        @include bgSvg(
+          icoList($s_point, "CCDAE8"),
+          no-repeat,
+          50% 50%,
+          100% 100%
+        );
+        margin-right: 4px;
+        vertical-align: middle;
+        margin-top: -2px;
+        @include tablet {
+          @include setCont(25px, 25px);
+          background-size: 25px 25px !important;
+        }
+        @include pc {
+          margin-right: 6px;
+          @include setCont(30px, 30px);
+        }
+      }
+    }
+    .desc {
+      margin-top: 4px;
+      color: #969696;
+      @include tablet {
+        @include font(16, 19);
+        margin-top: 10px;
+      }
+      @include pc {
+      }
+    }
+  }
+}
+
+.loading {
+  .container {
+    padding-bottom: 20px !important;
+    @include tablet {
+      padding-bottom: 0 !important;
+      min-height: 600px !important;
+      // max-height: 680px !important;
+    }
+  }
+  .area_bottom .inner {
+    border: 0;
+  }
+  article{
+    width: 100%;
+    .area_finance{
+      width: 100%;
+      display: block;
+    }
+  }
+  .wrap_scroll{
+    @include pc{
+      padding-bottom: 185px !important;
+    }
+  }
+  .w_inner {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    @include tablet {
+      padding: 60px 47px 40px 48px;
+    }
+    @include pc {
+      padding: 51px 50px 50px 45px;
+    }
+  }
+  section {
+    width: 100%;
+  }
+}
+
+
+.asdf {
+  width: 100%;
+  height: 130px;
+  border-radius: 14px;
+  background-color: #F1F1F1;
+  margin-top: 60px;
+  display: flex;
+  justify-content: space-around;
+  .a1 {
+    text-align: center;
+    &:before {
+      @include bgSvg(step(), no-repeat, 50% 50%, 100% auto);
+    }
+  }
+  .a2 {
+    text-align: center;
+    margin-top: 10px;
+  }
+  .a3 {
+    text-align: center;
+    margin-top: 4px;
+  }
+  .step {
+    color: white;
+    background-color: #005AAB;
+    border-radius: 10px;
+    text-align: center;
+  }
+  .text {
+    margin-top: 10px;
+    @include font(17)
+  }
+}
+
+

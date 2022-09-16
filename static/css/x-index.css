@@ -1,0 +1,89 @@
+/*!
+ * 10Bagger Community Page v1.0.0 (https://www.unicornranch.co.kr/)
+ * Copyright 2021 Unicorn Ranch, Inc.
+ * Author      : Gibberishor
+ * Create Date : 2021.10.01
+ */
+
+/* CASE1 : 1440 more than display
+ ******* START *******/
+@media ( max-width:1440px ) {
+    .idx-over-1440 { display: none; }
+}
+/******** END *******/
+
+/* CASE1 : 1280 more than display
+ ******* START *******/
+@media ( max-width:1280px ) {
+    .idx-over-1280 { display: none; }
+}
+/******** END *******/
+
+/* CASE1 : 1024 more than display
+ ******* START *******/
+@media ( max-width:1024px ) {
+    .idx-over-1024 { display: none; }
+}
+/******** END *******/
+
+/* CASE1 : 768 more than display
+ ******* START *******/
+@media ( max-width:768px ) {
+    .idx-over-768 { display: none; }
+}
+/******** END *******/
+
+
+/* CASE2 : 1440 > 1280
+ ******* START *******/
+@media not all and ( max-width:1440px ) and ( min-width:1280px ) {
+    .idx-1440-1280 { display: none; }
+}
+/******** END *******/
+
+/* CASE2 : 1280 > 768
+ ******* START *******/
+@media not all and ( max-width:1280px ) and ( min-width:768px ) {
+    .idx-1280-768 { display: none; }
+}
+/******** END *******/
+
+/* CASE2 : 1280 > 1024
+ ******* START *******/
+@media not all and ( max-width:1280px ) and ( min-width:1024px ) {
+    .idx-1280-1024 { display: none; }
+}
+/******** END *******/
+
+/* CASE2 : 1024 > 768
+ ******* START *******/
+@media not all and ( max-width:1024px ) and ( min-width:768px ) {
+    .idx-1024-768 { display: none; }
+}
+/******** END *******/
+
+
+
+
+
+
+
+
+
+
+/* CASE3 : 768 less than display
+ ******* START *******/
+
+@media ( min-width:1279px ) {
+    .idx-under-1280 { display: none; }
+}
+
+@media ( min-width:767px ) {
+    .idx-under-768 { display: none; }
+}
+/******** END *******/
+
+
+
+
+
